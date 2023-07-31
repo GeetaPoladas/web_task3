@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netflix</title>
+</head>
+<style>
+  #body {
+    background-color: black;
+  }
+  #query {
+    width: 250px;
+  }
+  #search {
+    float: right;
+    border-radius: 400px;
+  }
+  #home {
+    margin-right: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+  .main-header {
+    background-color: rgba(37, 39, 42, 0.485);
+  }
+  #category {
+    background-color: white;
+  }
+  div.trending {
+    padding: 4px;
+    width: 1420px;
+    background-color: rgb(218, 220, 226);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  div.popular {
+    padding: 4px;
+    width: 1420px;
+    background-color: rgb(218, 220, 226);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  div.newrelease {
+    padding: 4px;
+    width: 1420px;
+    background-color: rgb(218, 220, 226);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  div.onlyon {
+    padding: 4px;
+    width: 1420px;
+    background-color: rgb(218, 220, 226);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  div.crime {
+    padding: 4px;
+    width: 1420px;
+    background-color: rgb(218, 220, 226);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  div.kdrama {
+    padding: 4px;
+    width: 1420px;
+    background-color: rgb(218, 220, 226);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  div.usmovies {
+    padding: 4px;
+    width: 1420px;
+    background-color: rgb(218, 220, 226);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  div.indianmovies {
+    padding: 4px;
+    width: 1420px;
+    background-color: rgb(218, 220, 226);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  div.blockbuster {
+    padding: 4px;
+    width: 1420px;
+    background-color: rgb(218, 220, 226);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  div.tvshows {
+    padding: 4px;
+    width: 1420px;
+    background-color: rgb(218, 220, 226);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  div.top {
+    padding: 4px;
+    width: 1420px;
+    background-color: rgb(218, 220, 226);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+</style>
+<body id="body">
+  <header class="main-header">
+    <div id="bar">
+      <img src="https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=700&h=456"
+      alt="Netflix logo" width="50px"/>
+      <img id="search" src="https://png.pngtree.com/png-vector/20190321/ourmid/pngtree-vector-find-icon-png-image_854997.jpg"
+      alt="Search" width="50px"/>
+      <a href="#"></a>
+    </div>
+  </header>
+  <div>
+    <nav id="home">
+      <a href="https://www.google.com/search?q=tv+shows+in+netflix&rlz=1C5GCEM_enIN990IN990&oq=tv+shows+in+netflix&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIICAMQABgWGB4yCAgEEAAYFhgeMggIBRAAGBYYHjIICAYQABgWGB4yCAgHEAAYFhgeMggICBAAGBYYHjIICAkQABgWGB7SAQg5NTIwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+      target="_blank" style="color: white;">TV Shows</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <a href="https://www.google.com/search?q=movies+in+netflix&rlz=1C5GCEM_enIN990IN990&sxsrf=AB5stBjEjEs-oi94PIE1nOl6XNd82kJ4OQ%3A1689781464607&ei=2AS4ZPPbJN2C4-EP57afqA8&ved=0ahUKEwjzp8i_jpuAAxVdwTgGHWfbB_UQ4dUDCBA&uact=5&oq=movies+in+netflix&gs_lp=Egxnd3Mtd2l6LXNlcnAiEW1vdmllcyBpbiBuZXRmbGl4MggQABiABBixAzIFEAAYgAQyBRAAGIAEMgYQABgHGB4yBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIpE9QoDdYpkNwAXgBkAEAmAHqAaABwQiqAQUwLjUuMbgBA8gBAPgBAcICChAAGEcY1gQYsAPCAgoQABgNGIAEGLEDwgIHEAAYDRiABOIDBBgAIEGIBgGQBgg&sclient=gws-wiz-serp"
+      target="_blank" style="color: white;">Movies</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <a href="#">
+        <select id="category">
+          <option>Categories</option>
+          <option value="hin">Hindi</option>
+          <option value="tamil">Tamil</option>
+          <option value="tel">Telugu</option>
+          <option value="eng">English</option>
+          <option value="bollywood">Bollywood</option>
+          <option value="action">Action</option>
+          <option value="india">Indian</option>
+          <option value="inter">International</option>
+          <option value="bio">Biographical</option>
+          <option value="scifi">Sci-Fi</option>
+          <option value="usa">United States</option>
+        </select>
+      </a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    </nav>
+  </div>
+  <h2 style="color: white;">Trending Now</h2>
+  <div class="trending">
+    <img src="https://occ-0-300-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABZ0fwZiahm6G-kdzaejW03TnJ3KH8EaJSDuOxg4P-hBLAqWKGzrFApmnfe6dn39xrHwWlz3Z26ihzVflvCwasYML4Zalczvtbna9.jpg"
+    alt="takkarposter" width="180px" height="250px"/>
+    <img src="https://www.pinkvilla.com/images/2022-09/all_of_us_are_dead_imp_poster_main.jpg"
+    alt="allofusdead" width="180px" height="250px"/>
+    <img src="https://occ-0-1723-1722.1.nflxso.net/dnm/api/v6/XsrytRUxks8BtTRf9HNlZkW2tvY/AAAABUsuJAhrY_O2wzX0YUuwOaWLp1Ee7D6O4oWe1spXrVKWGNywIhz6I9g5mitrlu1dh7Jw0dVzsZG3agmi_F1T4mMOxjYAhmhB4g.jpg"
+    alt="naruto" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMzAyNmUyNTctODk2Zi00ZmZlLTkyZDQtZjMxMGFiMDJmMTNkXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg"
+    alt="celebrity" width="180px" height="250px"/>
+    <img src="https://dnm.nflximg.net/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABfLoELm7qAipR-TrnWduK1krVszUzTtHilUUdy21yk0zM09fDC059LiqYiwj_KresIOBPMRjU5FtFCIQugEqZMLnBctZVol-GEes9zn8XgDkxUEOJPTWGcgOE7aIOXyf7NuMyQ.jpg?r=a24"
+    alt="wednesday" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYTNmNDRhZTItNWVhMi00Y2NkLWI3NDUtMDAzMWE0YTk4MDg2XkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg"
+    alt="ohbaby" width="180px" height="250px"/>
+    <img src="https://assets.nflxext.com/us/boxshots/hd1080/70044605.jpg"
+    alt="happyness" width="180px" height="250px"/>
+    <img src="https://assets.nflxext.com/us/boxshots/hd1080/70143860.jpg"
+    alt="vampire dairies" width="180px" height="250px"/>
+    <img src="https://static.wixstatic.com/media/cc3c19_cbd914f0c500445884dedd0a88d14386~mv2.png/v1/fill/w_577,h_775,al_c,lg_1,q_90/cc3c19_cbd914f0c500445884dedd0a88d14386~mv2.png"
+    alt="moneyheist" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMDc4MGU3ZmItODRlYi00MTYzLWFkYzAtOTIxYzMzZjRhYWQ5XkEyXkFqcGdeQXVyMTQyMTMwOTk0._V1_.jpg"
+    alt="delhicrime" width="180px" height="250px"/>
+    <img src="https://images.ctfassets.net/4cd45et68cgf/RcGuekGhRkHuzYRKu9jTr/b306b8c0e0cddbac04bce6ddb41f2c71/EN-US_SQdGame_Teaser_Coffin_Vertical_27x40_RGB_PRE.jpg"
+    alt="squidgame" width="180px" height="250px"/>
+    <img src="https://resizing.flixster.com/0xxuABVVuzJrUT130WFHKE-irEg=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNzUyMTFhOTktZTU4Ni00ODkyLWJlYjQtZTgxYTllZmU2OGM0LmpwZw=="
+    alt="strangerthings" width="180px" height="250px"/>
+    <img src="https://occ-0-317-299.1.nflxso.net/dnm/api/v6/oQyw8Fv9eE41UPapt7zHvdUdzrE/AAAABTPDShOM1jW2JdF4mh2gc9WOEfSEsRiTyRWrnBFowHpqg6eFSqTKVzhlV1lnByARHzjzKBF_OouhT5n968DoAywvHnH2Nw96r6GV.jpg"
+    alt="lovetoday" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNDBkOWNiMTYtMjlkZS00NzJlLTg0ZmUtN2YwYWQ3N2I3N2Y0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+    alt="extraction" width="180px" height="250px"/>
+    <img src="https://www.searchhyderabad.com/wp-content/uploads/listing-uploads/logo/2023/06/Lust-Stories-2-OTT-Release.jpg"
+    alt="luststories" width="180px" height="250px"/>
+    <img src="https://pbs.twimg.com/media/FR4yLb2VIAAnJTQ.jpg"
+    alt="beast" width="180px" height="250px"/>
+    <img src="https://i2.netflixmovies.com/dibsl9ebc/image/upload/w_1024/pzpdmsovqrsvdodslbsb.jpg"
+    alt="aedilhaimushkil" width="180px" height="250px"/>
+    <img src="https://upload.wikimedia.org/wikipedia/en/8/84/The_Next_365_Days.png"
+    alt="365days" width="180px" height="250px"/>
+  </div>
+  <h2 style="color: white;">Popular on Netflix</h2>
+  <div class="popular">
+    <img src="https://m.media-amazon.com/images/M/MV5BMzY3MDI0ZWEtZGRjYy00YWE0LWIzOWQtMzBjZDYwNTg1ZmExXkEyXkFqcGdeQXVyOTE4NzcwNzI@._V1_FMjpg_UX1000_.jpg"
+    alt="fiysmile" width="180px" height="250px"/>
+    <img src="https://dnm.nflximg.net/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABY7dA8ryN8aCKA6-x7-X1fY0zJyn8HC0uHCqzumcMWuj5-zuk0ZJqPEH8CRY6vrKDUtTXBicwwRjmcEdFZSUeOXkWkR_FuGGeFiEgidvIiud95U843T4__eRGhC8qjNvkaJM5Q.jpg?r=9f3"
+    alt="meteorgarden" width="180px" height="250px"/>
+    <img src="https://pbs.twimg.com/media/FF2m_PwXoAc8toB.jpg"
+    alt="obsummer" width="180px" height="250px"/>
+    <img src="https://assets.nflxext.com/us/boxshots/hd1080/70143860.jpg"
+    alt="vampire dairies" width="180px" height="250px"/>
+    <img src="https://occ-0-1447-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABYvpkBywD_ob5Hi45TVTbjm6pT6MMokuHS2wTKYjssl7eHeyTZFEmBx-a0YDDTkHIu4ePcXsqzTSBuAO0ejX001Znvm6Qb4C87iU.jpg"
+    alt="school2017" width="180px" height="250px"/>
+    <img src="https://flxt.tmsimg.com/assets/p17608361_b_v9_ae.jpg"
+    alt="pyhomshoulder" width="180px" height="250px"/>
+    <img src="https://occ-0-317-299.1.nflxso.net/dnm/api/v6/oQyw8Fv9eE41UPapt7zHvdUdzrE/AAAABTPDShOM1jW2JdF4mh2gc9WOEfSEsRiTyRWrnBFowHpqg6eFSqTKVzhlV1lnByARHzjzKBF_OouhT5n968DoAywvHnH2Nw96r6GV.jpg"
+    alt="lovetoday" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BY2IxYzNjZDAtNzU2OC00OTFmLWIwNWUtNDFmMmFkMDExYjMxXkEyXkFqcGdeQXVyNDI3NjU1NzQ@._V1_.jpg"
+    alt="nevertheless" width="180px" height="250px"/>
+    <img src="https://flxt.tmsimg.com/assets/p23468162_b_v7_ae.jpg"
+    alt="theglory" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOTgxN2VhNTktY2NhNC00ODIxLWFjMjUtNTUzYWZmNTcyYmE0XkEyXkFqcGdeQXVyNDI3NjU1NzQ@._V1_.jpg"
+    alt="truebeauty" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOTUzMTMzNTgtNmI5NS00ZTI1LTgzMjYtZTFkZWZkYTE0MWMyXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg"
+    alt="mismatched" width="180px" height="250px"/>
+    <img src="https://occ-0-1723-1722.1.nflxso.net/dnm/api/v6/XsrytRUxks8BtTRf9HNlZkW2tvY/AAAABUsuJAhrY_O2wzX0YUuwOaWLp1Ee7D6O4oWe1spXrVKWGNywIhz6I9g5mitrlu1dh7Jw0dVzsZG3agmi_F1T4mMOxjYAhmhB4g.jpg"
+    alt="naruto" width="180px" height="250px"/>
+    <img src="https://occ-0-1327-987.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABVtMCJDEIeGa11FRxZ7Sj9h98dslbK-zAUd8DK-pYt1PmaHNzkTB8_MazPTrL2op2LnrU6uiIQwifdGGRv5yjBy_0fAZxJs60ovG.jpg"
+    alt="three" width="180px" height="250px"/>
+    <img src="https://occ-0-1937-299.1.nflxso.net/dnm/api/v6/oQyw8Fv9eE41UPapt7zHvdUdzrE/AAAABbssTuy6FOVOhLDQHxP5OFFLyKjbD_azsKa-AqutLkkJiRLnL1dP4_UE31AnJYoBmHofce_9TbtMf_XOKoukojMUDZqkfhtbA4VB.jpg"
+    alt="aakasam" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZjk2NDhmNDgtNzQ2ZS00YzU1LTljNjgtY2ZjM2M3OTVlNTljXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+    alt="ohana" width="180px" height="250px"/>
+    <img src="https://media1.popsugar-assets.com/files/thumbor/cs4Z0VlIGyYYwJQYCZC_082PEyA/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/09/09/821/n/1922283/aee16bab286bf24b_MCDPPKK_EC001/i/PK-2014.jpg"
+    alt="pk" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNDhhODc3ZmEtOTZjNy00NjcyLWI1YWUtODE0MzYwN2EzZmJmXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_.jpg"
+    alt="mishanimpossible" width="180px" height="250px"/>
+    <img src="https://pbs.twimg.com/media/FWqj1NFacAAG50f.jpg"
+    alt="major" width="180px" height="250px"/>
+  </div>
+  <h2 style="color: white;">New Releases</h2>
+  <div class="newrelease">
+    <img src="https://m.media-amazon.com/images/M/MV5BZjE5ZDJmZGItMDRkNi00YjAxLTliYjQtYjBjZjk4Yjk4NjdhXkEyXkFqcGdeQXVyMTUzOTcyODA5._V1_FMjpg_UX1000_.jpg"
+    alt="kingtheland" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMjhmMjlhZTYtZjczZi00NmI5LTlhNzUtOWRkZTA3ZDJkNzMxXkEyXkFqcGdeQXVyMTUyNjIwMDEw._V1_.jpg"
+    alt="kohrra" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNTBlZmE4YzItNTY5Mi00NmIxLTlhZTAtOWIxNjFlNTMzNmI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+    alt="kingdom2" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYzNkMmY0MWQtMzY1Mi00MTFlLWIxMTgtNGI5NTA3OGY0ZTc3XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_.jpg"
+    alt="toohot" width="180px" height="250px"/>
+    <img src="https://occ-0-622-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABerNwJNtWEHKszE2tPUrIpTfmm0keDwQT8R4v7QUE5JBM19Q_uU4S-rR958a3OK0pqYO6KJjPUb4PSGPeF3B0rybA1JDFl8Eb2ZZVt6iFnzamTqiUgN1NG60az60Qz-9eRx7dg.jpg"
+    alt="lovetactics2" width="180px" height="250px"/>
+    <img src="https://dnm.nflximg.net/api/v6/2DuQlx0fM4wd1nzqm5BFBi6ILa8/AAAAQcRjQL3KbsMki78yrSCC4Oi84nxEfmq2xP7miIx9RFJnCST6xlCqNdLZdRj7adRtsPqx7YgwDcZl8J8SrENao76UMgUx3WHgRVvONSJsNqzRaqFnYOTS6zwQVNdvjCdirRRLyfSvh_GVVeXuxHT8rtXN.jpg?r=3da"
+    alt="burnthehouse" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYzIzMTQ2NDQtMGY5Ny00MTMxLThkZDYtMTk5MzgzMmZjMWJlXkEyXkFqcGdeQXVyMTU3NDg0OTgx._V1_.jpg"
+    alt="smurfs" width="180px" height="250px"/>
+    <img src="https://assets.nflxext.com/us/boxshots/hd1080/1181732.jpg"
+    alt="devilsadvocate" width="180px" height="250px"/>
+    <img src="https://occ-0-2219-2218.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABYJoDbHC0GD6FVdA1wqd8yHiwhG_NvDXkPgeglhN8DGrtrG1z6Uvzwm1xl7PFUA5CXKzufk6vT-36YuVmXCRcEkvd4Bm5H5DMaz5oi0DeHR5L3lyWj8qRcibybJGEZNAdZVkvw.jpg"
+    alt="5starchef" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYTUzYmJlNDgtMzM2ZS00N2ZkLWJjY2ItNzM0ZmVjMWU5OTA3XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg"
+    alt="overlord" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZjBmNTI2ZDEtOThhMy00OTkyLTg5Y2ItMTUxMzU4NWI1MzhhXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_.jpg"
+    alt="sweetmagnolias" width="180px" height="250px"/>
+    <img src="https://dnm.nflximg.net/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABcdux6Z0ZFxg6oTeninbxXpi3G-ZE-Yw0hGo7lt0EPMwdMHukxflnyWRSPhkUiONeNP6oaL3ZOjw5Z8_nGbnbinXIbk7_15PzJU1VYmHzQnukxq4Rm9ZId_Hoxn6ot5a4_6mOg.jpg?r=5f1"
+    alt="survival" width="180px" height="250px"/>
+    <img src="https://occ-0-1430-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABbpcmH3eoukbYxZk0m5kPoWwUbqIE9pGT0uz0WPsubZ8mXcyUfcFiB681Nj7NsvjjLuIwaFkVlRbV7Xsq_aRW9SIprbdYDpw0CglYkYpQ55AHjozdjIC_q7VdgIoNgXQYoAHRYL18rade6i4L8iG4jdDWvwBd8L8i3n7eeNsndQ_8fdUMDdGGaDmGi363d2hAl84iSQICoFeYB_6DLC9aYYBHU-TCTf5d3vqqbQAgTU9SpUSuP9xtisc3mQ27FMxWW2t8JVTA3T2OvQt2qf8r1pJ.jpg"
+    alt="yizoyizo" width="180px" height="250px"/>
+    <img src="https://art-s.nflximg.net/1f9a1/fc2d7f5dd4d8bae9d253acddbdc997dab6d1f9a1.jpg"
+    alt="dejavu" width="180px" height="250px"/>
+    <img src="https://occ-0-1681-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABaZeSMOI1gM5RLRbuuwjVyyJLiwHyYf_pCaE2iZjZX8X2n_8dzYZn1fmA1wjLHVpLrnmgHvNxGciAerKjaAaR1zBX40w0WqxVHDmTErP-a1OYUxrn2MGy8x9tECgUS2zidz5xZApaNd4Zoj_4MXc9xOFbL4KKa6Od_uNX_hJXxwSV9ThF2AYsmGnwbShSYPEba1m2Zh3noxadC8t4l8Ip0yCq2fESFkAfCARYJzLrGZvvavM5eItpRBuUrTGfHYfp3OWfTx4S8IjdVfqHzgvEcaIMgmNSWRpVNOLy_xn4NG2RE3EVPYR3nhEWnnwsij4Y-iCrNCF4OHQqMej_Vyskoqy-tm-uwPJEUOmvEUiMQ9DEgBiMY7xlXW7YktqqaVmRjI_hrcN_M8-oFcxyNxMV3aRSvNdWNlRLZsWslKL5FQDMw.jpg"
+    alt="hiddenlove" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZjllMzc1ZTAtMzYyYi00OWU4LTgzNTAtYWJmMWNhZDI3ODVjXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg"
+    alt="manifest" width="180px" height="250px"/>
+    <img src="https://occ-0-1175-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABWTuwyyhpp9WQfvUr8XRq6BVBCmRpa3ZDREP9C_9tdvV03-FZHXO0djGIU3CklfN49T5ICwY17LjJCEmy9W9s-u3rqfhMRd2cpFP.jpg"
+    alt="meter" width="180px" height="250px"/>
+    <img src="https://assets.gadgets360cdn.com/pricee/assets/product/202302/Dasara_1675253603.jpg"
+    alt="dasara" width="180px" height="250px"/>
+  </div>
+  <h2 style="color: white;">Crime Movies</h2>
+  <div class="crime">
+    <img src="https://assets.nflxext.com/us/boxshots/hd1080/60034560.jpg"
+    alt="manonfire" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOTEwMzY2MzE4MV5BMl5BanBnXkFtZTgwMzA2MTg2MTI@._V1_.jpg"
+    alt="naamshabana" width="180px" height="250px"/>
+    <img src="https://filmyhype.com/wp-content/uploads/2021/02/red-movie-filmyhype.jpg"
+    alt="red" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYmU5Y2ZhMTctMWQzNy00NjdjLTljN2ItZmRlOGU4MTNjODY1XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+    alt="whitetiger" width="180px" height="250px"/>
+    <img src="https://occ-0-2826-299.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABeE8QuuLLY2EhBCmQo016HDDLt2cFu6Gh3yCkRTmMUSLeWTQgftoKWFpQrGg3LYzTFuNN-_86zFMlkgfQCaNlucJGtm8wKekXYNC.jpg"
+    alt="godse" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcwOTM5NzMzOQ@@._V1_.jpg"
+    alt="nowuseeme" width="180px" height="250px"/>
+    <img src="https://flxt.tmsimg.com/assets/p9042222_p_v10_ab.jpg"
+    alt="agneepath" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMzM4ZGIzMzAtNGQxMC00MzllLWIyNDMtNzMwOGZlMmMzZWFhXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg"
+    alt="iratta" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYzJkMjhkZDgtMjM4Yy00OWJiLWFlZmMtMjk5YTVlNDg5NDJhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg"
+    alt="serialkiller" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYTZmOTY1MDAtOTYxOC00YTQ1LTlkNDUtMmJiZDEyYmE1YmRmXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg"
+    alt="drive" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMTBlMDI1MWUtYTAyNC00NTczLWE3MWYtYzE3YWNmYWQwZmM3XkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_FMjpg_UX1000_.jpg"
+    alt="vadh" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNDMwZjQ2YzUtZDQyMC00MjcwLTlmN2MtZGY4OGEyMzMzNTk4XkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_FMjpg_UX1000_.jpg"
+    alt="chornikalke" width="180px" height="250px"/>
+    <img src="https://occ-0-2827-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABcGv1MNI88UHRKJyyY3RNZ71_IkNIL8cbZI3JmTD7rrY9Hi9DSt852rpnLsOmpdcWDP3JqKtluL-CGFKvpUQQEVoLe2GtlY3M17C.jpg"
+    alt="kaapa" width="180px" height="250px"/>
+    <img src="https://occ-0-2585-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABXmR1yAuCUUecZQb3y78EVfWSa2G8iFiXLq4EBE3F8tThyEb88y4LmLLhpQk1bgjrcA6RHxS3VPRa_swIsXzfrjwTJ9Hc89kPsXP.jpg?r=d16"
+    alt="neevevaro" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYWQ0YWMxYzEtNWYwNS00NWE5LWJiYjQtYTM2MmZlZTllZDRjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg"
+    alt="wanted" width="180px" height="250px"/>
+    <img src="https://bingeddata.s3.amazonaws.com/uploads/2020/11/now-you-see-me-2-scaled.jpg"
+    alt="nowuseeme2" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOGUyMzUyZWYtMzg1Ni00YTFlLTk3NDEtY2M5ZTZiMzg3MDM2XkEyXkFqcGdeQXVyMTQyMTMwOTk0._V1_.jpg"
+    alt="mirage" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMzY2OTU0NTgtMGZiZC00M2Y5LThjZjQtOTcyNWNlZDdhMjZkXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg"
+    alt="forgotten" width="180px" height="250px"/>
+  </div>
+  <h2 style="color: white;">Only on Netflix</h2>
+  <div class="onlyon">
+    <img src="https://m.media-amazon.com/images/M/MV5BZjE5ZDJmZGItMDRkNi00YjAxLTliYjQtYjBjZjk4Yjk4NjdhXkEyXkFqcGdeQXVyMTUzOTcyODA5._V1_FMjpg_UX1000_.jpg"
+    alt="kingtheland" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYzU0M2ZhYWItNzdiZS00YzdlLWJiZTktYzIwYmNlNzI1ZDI4XkEyXkFqcGdeQXVyMTMzODk3NDU0._V1_.jpg"
+    alt="darkdesire" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYzc4ZmFhZjItOWJjMy00YzhiLTkxMDAtNWUyNjIyOTJkYmY3XkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_FMjpg_UX1000_.jpg"
+    alt="she" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYmRhZjkyMjEtNjRkMS00MDQ0LTg2NGMtMTQ3ZjE0NjJmMjM2L2ltYWdlXkEyXkFqcGdeQXVyNTY0MTkxMTg@._V1_FMjpg_UX1000_.jpg"
+    alt="13reasons" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BY2IxYzNjZDAtNzU2OC00OTFmLWIwNWUtNDFmMmFkMDExYjMxXkEyXkFqcGdeQXVyNDI3NjU1NzQ@._V1_.jpg"
+    alt="nevertheless" width="180px" height="250px"/>
+    <img src="https://lh3.googleusercontent.com/fYsZmULxpRJhXeTfCWhIK0_G3qP8IZeSA_qtrT8P8f7wHdZqYi_8LH2Fnnh6Bo8h9z8_NdpGc3Wj-__xkFwb5-FSHSn9J2R_q2wxa9fv_CK9PqFjsnmaS_g3HGs-zpU8jPG8VAuh"
+    alt="therain" width="180px" height="250px"/>
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Bird_Box_%28film%29.png"
+    alt="birdbox" width="180px" height="250px"/>
+    <img src="https://thedigitalpopcorn.files.wordpress.com/2023/01/extraordinary-attorney-woo-frequently-asked-questions.jpg"
+    alt="extraordinary" width="180px" height="250px"/>
+    <img src="https://www.pinkvilla.com/images/2022-09/all_of_us_are_dead_imp_poster_main.jpg"
+    alt="allofusdead" width="180px" height="250px"/>
+    <img src="https://resizing.flixster.com/bOEHoxe8FnTy1QNnpUliaxj6gKE=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvZDZkZTdjNWYtMTJmMy00ZjJjLWE5MDQtYzdkNDA2ZjUwNzQzLmpwZw=="
+    alt="ginny&gregoria" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNzVkOTIxZWUtMTNjOC00NWMwLWEyNDQtNTY2NzYxNjhhYTA1XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg"
+    alt="locke&key" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMzAyNmUyNTctODk2Zi00ZmZlLTkyZDQtZjMxMGFiMDJmMTNkXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg"
+    alt="celebrity" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOTMyYTIyM2MtNjQ2ZC00MWFkLThhYjQtMjhjMGZiMjgwYjM2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+    alt="platform" width="180px" height="250px"/>
+    <img src="https://occ-0-299-300.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABdvuOK3bHRJ9_4oSZ8nSSE9sGeHhHEB6VUHPzW-n-rT5W8WxMcLoG_WfVlBjMnJ8kM8QSZJTcu-Rdz6U3AFwPu868kbamAq_EDe8Sc2PImQ9Ul_Tuu05SOD9Qsr6DQ2gvauQs5HMhisGBv7WuHuKyyhwx-Tw7k8BtBB4xakkmQ.jpg"
+    alt="startup" width="180px" height="250px"/>
+    <img src="https://dnm.nflximg.net/api/v6/2DuQlx0fM4wd1nzqm5BFBi6ILa8/AAAAQdQ9ake-jkZuan2QJSGIELMOysGUvHevg0-zbqDSaQugn2zlsVmLheJc7D-xlxe-bQ4WrCUXFHgpQsOvl8bIhOD2b3fcy9unf6BcdY49bEHezKmQ2zpTHOsoMht5RIb_CQxVCzC1YxP4AIqKZCjO2LDB.jpg?r=46f"
+    alt="you" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZWI4NjY1MmQtN2QwNS00YTQwLWJlNDItMjZjMjE1ODk3MzI4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+    alt="littlethings" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNDQ4MTE5YzItMmY2OS00NGViLTlkYjctZWVhYTdhZWY4N2UyXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg"
+    alt="rananaidu" width="180px" height="250px"/>
+    <img src="https://www.tvguide.com/a/img/catalog/provider/1/1/1-6955305959.jpg"
+    alt="sexeducation" width="180px" height="250px"/>
+  </div>
+  <h2 style="color: white;">Koren TV Comedies</h2>
+  <div class="kdrama">
+    <img src="https://occ-0-1175-300.1.nflxso.net/dnm/api/v6/Da_vleYcahiCE7JMYt8LJRyoenc/AAAABRWc4Ds_BSoBGUAfaKNne5q6CcSOGsYFwy5yhfC1koGVM7Iga0ox4OYuShJKdOqXbagedED48OmY766o-BXm6TJ2Lwjf.jpg"
+    alt="couplebacktrack" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOTgxN2VhNTktY2NhNC00ODIxLWFjMjUtNTUzYWZmNTcyYmE0XkEyXkFqcGdeQXVyNDI3NjU1NzQ@._V1_.jpg"
+    alt="truebeauty" width="180px" height="250px"/>
+    <img src="https://occ-0-1103-300.1.nflxso.net/dnm/api/v6/Da_vleYcahiCE7JMYt8LJRyoenc/AAAABbkZwnfWOJFDYEJnRZKf5xf-UVlRr8IaMyjA3-wsFRbh93K3eyMfnu97mkTXwNWK-TuVS3vuuYDTCxMuBqgQcOXeAjVY_QkkweXbtsJAxpJh_bXQh087Mck8gkPWGlwWwiyIrUw61b0BntTcDEouM5dUKap2lD0VkAEslr5ycjhcF2lFQe_E55MPoyPQb4ngfeDO9EFwduA0S781k1DlHI2PsN_RR4joEy0WXtYPWcjGjsg2Y7PYQzapVieSdugnwouGCxGTaDRSwZuCAJEoyLPDvO9OUKpMBZt4q0uoJw6vUc6wR_vnhk_oQ5q9m83c-kSOewkOO0tQzQPyPB-lOpWEEUHZMY4NzhEFrEZFZDGTYVQftooPnpd651rGd8QpvJRpUZJno6M0FesLbhE4ge89dYUegIyVFowa3VylN1rXLWw_HnrTHcjWxi_CGwZAB2d9nVLbxnhZt7CN5_zpDpBhaquVoaepDfVZI00DSMlD6jXirWYh6GWAFHHmLhbk39fIMMGmDXmaeyKd5w.jpg"
+    alt="hometown" width="180px" height="250px"/>
+    <img src="https://1.bp.blogspot.com/-d-sQ4AKG4ts/Xy-pxIBaimI/AAAAAAAASeM/xOhDJ_H0okEpbOdUosleJN04XwB6ZDakACLcBGAsYHQ/s0/its%2Bok%2Bnot%2Bto%2Bbe%2Bok%2B2.jpg"
+    alt="itsoknottobeok" width="180px" height="250px"/>
+    <img src="https://images.justwatch.com/poster/305968880/s718/see-you-in-my-19th-life.%7Bformat%7D"
+    alt="seeu19thlife" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMGM2ODk3MTItN2ZkOS00ODMzLTg1ZjgtMWI3Y2U5ZDNmMzc0XkEyXkFqcGdeQXVyNjI4NDY5ODM@._V1_FMjpg_UX1000_.jpg"
+    alt="whatswrongkim" width="180px" height="250px"/>
+    <img src="https://kdramadiary.com/wp-content/uploads/2022/01/Forecasting-Love-and-Weather-netflix-kdramadiary.jpg"
+    alt="forecasting" width="180px" height="250px"/>
+    <img src="https://occ-0-56-58.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdM2sXffnidbzI3S9GrfzAerUbMNuHdZSg1cxmrsR8RapRW6drFvlv_ytld6J2httaxSuVg0btWTBkmAXBh5G8LcNmsALGhk2ZmsASCxYCDr2XAabBd3DZpEHGb3U7eMYT9vdw.jpg?r=c8b"
+    alt="vincenzo" width="180px" height="250px"/>
+    <img src="https://flxt.tmsimg.com/assets/p17693699_b_v13_ac.jpg"
+    alt="crashlandingonu" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYTIxZGYyNDAtNjNiNy00MTdjLWE5OTAtZTA3ZDQ5YzdlZGYxXkEyXkFqcGdeQXVyMTI1OTY3MzM3._V1_FMjpg_UX1000_.jpg"
+    alt="ourbelovedsummer" width="180px" height="250px"/>
+    <img src="https://occ-0-2922-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABcyAepBzoO5ISiDh-HKzN6aJMZki78uAr2xZXIGeLErLmqnHmujOl3biM94WaDxkwmI2aN2OoMiRmaOkuLPpIHpJj5AkwZrwJQzwk9Z1f8lhkjtTogrCI-6kow1u8jf-nQsuKXiiXFC2gHLRpreFnlwQ7WwBSqmf29o3rnFbTMZY9qubJx2LV5RuKMyBrznQdqy5h9tkWYQUrZVLMJVb-7q4xSXFpMvINoP8ZEEUhG2bKd1at6blxpPwquF73TAFB1aP_4Mog2SXQkPGOx07LK7F9rFjS7g-pRPux-oNxWM1AdiX8m-1RbCeerV7hT-jocjqERqvz7DJgR5lsw6XL-l9nHrE20c35s-OIt0dv1UpNu0FL7CWv0pM_gblONVSGStY7Fii4KQmACWfW5bEnDuSHFckLzTCW08JkrXpSYizXWs636uXepMPdPhpBqmZ4taaXyI_GQ.jpg"
+    alt="goodbadmother" width="180px" height="250px"/>
+    <img src="https://occ-0-1167-300.1.nflxso.net/dnm/api/v6/Da_vleYcahiCE7JMYt8LJRyoenc/AAAABWzZLG4l3xZYakeLnQFG6fHuKufA7TsSn4m3CeBoLvT7qFRdSHdt1NZuVODb9HSus2F2hiur_UazDePL4Sr37hChSOlk.jpg"
+    alt="reply1988" width="180px" height="250px"/>
+    <img src="https://images.justwatch.com/poster/139463775/s592/welcome-to-waikiki"
+    alt="welcometowaikiki" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZGU1ODJmM2UtNDk0OS00MWIyLWJlNjItMDU3MTU2ZmYxNTM4XkEyXkFqcGdeQXVyMTQyMTMwOTk0._V1_.jpg"
+    alt="alchemy" width="180px" height="250px"/>
+    <img src="https://occ-0-2827-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABZoAeiJJ2_7gdWLcSyABL97nqE9FSnJoC5fCxv4C2PeCEwZxdzXdZShb5Yat8lQEnoubk4kpLLgwYQacphShgiH42VtYqIlgzHLl.jpg"
+    alt="mr.queen" width="180px" height="250px"/>
+    <img src="https://occ-0-300-299.1.nflxso.net/dnm/api/v6/XsrytRUxks8BtTRf9HNlZkW2tvY/AAAABQI7xmYhVfD30X7jBW2I4QgVCPs64-jn4IyRjWofaYkKbc83uAZ68Vid4qNVtAZay2FULzymdT6e8Gb5Qqnpt6KL0nXkzXol-Q.jpg?r\x3D987"
+    alt="imnotarobot" width="180px" height="250px"/>
+    <img src="https://occ-0-1723-1722.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABXXpvUk3J0GqBq7XFpVwughBgbngsecBUMzMGE6IKTxQ4zitoKzExWK4LvJOYiNJK1o32OdpQLz7pq_b-3Uo92y5LhHyn6ax0r6YTFGrqNsksygnwFZxSRiFMhfkIRRS_wcMHVgmgUBf9rgHkKq47YrQtJyEgpoMBhLsy3JvTQ.jpg"
+    alt="hibyemama" width="180px" height="250px"/>
+    <img src="https://images.justwatch.com/poster/118578312/s718/she-was-pretty.%7Bformat%7D"
+    alt="shewaspretty" width="180px" height="250px"/>
+  </div>
+  <h2 style="color: white;">US Movies</h2>
+  <div class="usmovies">
+    <img src="https://occ-0-1448-300.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABe_w0nmo96s9U3lrD5Mc0TadG6I8mp2zJzZ3y6nwZF6zblPuR5xiLnE-2UFIa7cIa5DxQSPr3VKKVD9EB1j946xnNFTZ.jpg"
+    alt="godsofegypt" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcwOTM5NzMzOQ@@._V1_.jpg"
+    alt="nowuseeme" width="180px" height="250px"/>
+    <img src="https://i1.netflixmovies.com/dibsl9ebc/image/upload/w_600,h_891,c_lfill,g_north/fwocnzrpubjaat7orxsn.jpg"
+    alt="passengers" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZjNkNzk0ZjEtM2M1ZC00MmMxLTlmOWEtNWRlZTc1ZTUyNzY4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg"
+    alt="enolaholmes" width="180px" height="250px"/>
+    <img src="https://assets.nflxext.com/us/boxshots/hd1080/70044605.jpg"
+    alt="happyness" width="180px" height="250px"/>
+    <img src="https://occ-0-1167-300.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABcTGtt76IlQAp_4jjGmojjAKAoONhaarLVPFRSD2lPGEPafQcYKOX4leWym2QCLI39m8gq66px4MKE0OxoT3KbyOXf-qKDb2jYWj930OHqTqakisLg4i5rFJztfqVA.jpg"
+    alt="run" width="180px" height="250px"/>
+    <img src="https://assets.nflxext.com/us/boxshots/hd1080/60034560.jpg"
+    alt="manonfire" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZTlkMmE0NTItYzdiMi00ZjIwLTljOGQtZGJjYTRhMmU1ZjIyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+    alt="waroftheworlds" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOWM0YWMwMDQtMjE5NS00ZTIwLWE1NWEtODViMWZjMWI2OTU3XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg"
+    alt="adamproject" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMGQwYjY1YWUtN2FjMS00MzYxLWEyNDYtYzdlZWJhZTI5M2NhXkEyXkFqcGdeQXVyMTQ4NjQyMzE@._V1_FMjpg_UX1000_.jpg"
+    alt="chatterleyslover" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMTU5OTYzMzcwOF5BMl5BanBnXkFtZTgwNTkzMzk4NTM@._V1_.jpg"
+    alt="extinction" width="180px" height="250px"/>
+    <img src="https://images.sr.roku.com/idType/roku/context/global/id/8c9afe9ec21057338e896e4c1dab0f92/images/gracenote/assets/p12003594_b_v8_am.jpg/magic/396x0/filters:quality(70)"
+    alt="conjuring2" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMmZlOGZkMjMtZDc4Ny00ZTQ1LWFmYTQtOThlY2JjYjg1NGQyXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_.jpg"
+    alt="silence" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOGM3MzQwYzItNDA1Ny00MzIyLTg5Y2QtYTAwMzNmMDU2ZDgxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_.jpg"
+    alt="skyscraper" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZjk2NDhmNDgtNzQ2ZS00YzU1LTljNjgtY2ZjM2M3OTVlNTljXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+    alt="ohana" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNjQ0Mzk0OTE5MF5BMl5BanBnXkFtZTgwNDkyOTI0NTM@._V1_.jpg"
+    alt="kissingbooth" width="180px" height="250px"/>
+    <img src="https://occ-0-32-55.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVYpeSJqJdaWfDG_sbOP0nfLwPMgn7pLwIzlrEBA7DrMjN7ZXoSEvrBAXWmUpxUvFD5tHeWdd31jXpOEsz3iXhVJheqYx2Ojcy0_.jpg?r=632"
+    alt="spiderman" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYmI4NDNiMmQtZTFkYi00ZDVmLThlYTAtMWJlMjU1M2I2ZmViXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_FMjpg_UX1000_.jpg"
+    alt="annabelle" width="180px" height="250px"/>
+  </div>
+  <h2 style="color: white;">Indian Movies</h2>
+  <div class="indianmovies">
+    <img src="https://m.media-amazon.com/images/M/MV5BNmQ2YzEwM2YtNTMyZi00NjA3LTkxYzQtZDdmN2E5MDYwNzBmXkEyXkFqcGdeQXVyMTU0ODI1NTA2._V1_.jpg"
+    alt="theerakaadal" width="180px" height="250px"/>
+    <img src="https://occ-0-1937-299.1.nflxso.net/dnm/api/v6/oQyw8Fv9eE41UPapt7zHvdUdzrE/AAAABbssTuy6FOVOhLDQHxP5OFFLyKjbD_azsKa-AqutLkkJiRLnL1dP4_UE31AnJYoBmHofce_9TbtMf_XOKoukojMUDZqkfhtbA4VB.jpg"
+    alt="aakasam" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMzM4ZGIzMzAtNGQxMC00MzllLWIyNDMtNzMwOGZlMmMzZWFhXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg"
+    alt="iratta" width="180px" height="250px"/>
+    <img src="https://occ-0-5644-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABTGGaOyPTFWatvAN-CZwZz6ZY9i-NGHKe2f2kbfOohUeyHbssosUfDMPEXXCHIZ0fyCv7aMty7zosAf5NHqbkaYERKoFSvYviYjs.jpg"
+    alt="spyder" width="180px" height="250px"/>
+    <img src="https://occ-0-2826-299.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABeE8QuuLLY2EhBCmQo016HDDLt2cFu6Gh3yCkRTmMUSLeWTQgftoKWFpQrGg3LYzTFuNN-_86zFMlkgfQCaNlucJGtm8wKekXYNC.jpg"
+    alt="godse" width="180px" height="250px"/>
+    <img src="https://cdn.flixboss.com/70087087/posters/AAAABRG56J-80Z5emLSmYzxjC1Z55FYt8TRuRyTiDJWBIvtP_kqQI667-4IKaoDwsbDHEh4aYizsg0qEz6o79at1O3kw_A.jpg"
+    alt="taarezameenpar" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMjQ3MDFhMWEtMmM2Zi00NWM4LWJmNmYtOTVjMGJkNjljYTA1XkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg"
+    alt="don" width="180px" height="250px"/>
+    <img src="https://cdn.123telugu.com/content/wp-content/uploads/2022/11/Matti-Kusthi.jpg"
+    alt="mattikusthi" width="180px" height="250px"/>
+    <img src="https://www.cinejosh.com/newsimg/newsmainimg/mega-mass-blockbuster-waltair-veerayya-streaming-now-on-netflix_b_2702230930.jpg"
+    alt="waltair" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZmYyNjc0NTAtNzg4MC00NmVkLWI1NDAtYjY3ZjM3ZDdkZmNiXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_FMjpg_UX1000_.jpg"
+    alt="awe" width="180px" height="250px"/>
+    <img src="https://occ-0-1327-987.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABVtMCJDEIeGa11FRxZ7Sj9h98dslbK-zAUd8DK-pYt1PmaHNzkTB8_MazPTrL2op2LnrU6uiIQwifdGGRv5yjBy_0fAZxJs60ovG.jpg"
+    alt="three" width="180px" height="250px"/>
+    <img src="https://occ-0-2827-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABcGv1MNI88UHRKJyyY3RNZ71_IkNIL8cbZI3JmTD7rrY9Hi9DSt852rpnLsOmpdcWDP3JqKtluL-CGFKvpUQQEVoLe2GtlY3M17C.jpg"
+    alt="kaapa" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNTE5ZTNmMWYtZGEzOS00NmViLWI2MzItNTAwMzJmMTgzYmI5XkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg"
+    alt="navarasa" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BM2FmNzc3ODItOTE4Ny00OTI1LWI2ZDktNWVjOTkyMmEzOTk5XkEyXkFqcGdeQXVyNjA3MDIwOTY@._V1_FMjpg_UX1000_.jpg"
+    alt="rowdyfellow" width="180px" height="250px"/>
+    <img src="https://occ-0-317-299.1.nflxso.net/dnm/api/v6/oQyw8Fv9eE41UPapt7zHvdUdzrE/AAAABTPDShOM1jW2JdF4mh2gc9WOEfSEsRiTyRWrnBFowHpqg6eFSqTKVzhlV1lnByARHzjzKBF_OouhT5n968DoAywvHnH2Nw96r6GV.jpg"
+    alt="lovetoday" width="180px" height="250px"/>
+    <img src="https://i2.netflixmovies.com/dibsl9ebc/image/upload/w_1024/pzpdmsovqrsvdodslbsb.jpg"
+    alt="aedilhaimushkil" width="180px" height="250px"/>
+    <img src="https://occ-0-1167-300.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABdOR-X8mEKxugsfxfOUszJ7737DV1Ez7kidLE93Yd22FJZJCIeSFJ14Dyue6RM2HxVkqQiIHLDaF1SV2bOi3tAC8lEuu.jpg"
+    alt="mandela" width="180px" height="250px"/>
+    <img src="https://occ-0-1167-300.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABVjGZAn-owIslJXJNTiBfenzDuO_4YRQ_b88Ei-AikPoH4zggwEX1UbLTWz6gTnXvgBuJz3VQiBzTSpH0lCKHkqzm6UM.jpg"
+    alt="lagaan" width="180px" height="250px"/>
+  </div>
+  <h2 style="color: white;">Blockbuster Movies</h2>
+  <div class="blockbuster">
+    <img src="https://media1.popsugar-assets.com/files/thumbor/cs4Z0VlIGyYYwJQYCZC_082PEyA/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/09/09/821/n/1922283/aee16bab286bf24b_MCDPPKK_EC001/i/PK-2014.jpg"
+    alt="pk" width="180px" height="250px"/>
+    <img src="https://occ-0-1167-300.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABVjGZAn-owIslJXJNTiBfenzDuO_4YRQ_b88Ei-AikPoH4zggwEX1UbLTWz6gTnXvgBuJz3VQiBzTSpH0lCKHkqzm6UM.jpg"
+    alt="lagaan" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BM2UwNGNjMWEtMGI2My00YzI3LTljMDEtYTFhYzM3YWMyMzNmXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg"
+    alt="jagame" width="180px" height="250px"/>
+    <img src="https://occ-0-300-299.1.nflxso.net/dnm/api/v6/XsrytRUxks8BtTRf9HNlZkW2tvY/AAAABTcCgmyIkSlS-NCBloeHLALUtmhWBNYbsMbbH-PhWvFv6P2J31qJuuAdcB0yw1VR-JzqY_XQ7jyXdVeLD4OJnNF5Hd4OumaJkw.jpg"
+    alt="sarkar" width="180px" height="250px"/>
+    <img src="https://occ-0-179-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABax9ho_AI-HiedL-6UALNAxYqbwp8S4XnWh3j0aGHj1scQWrWzbPRKUCGzmo300LHRQNn1q2zjcsHwAO66_doBtaLGqNkAMdkJax.jpg?r=33f"
+    alt="sanju" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNTA4MjQ0ODQzNF5BMl5BanBnXkFtZTgwNzA5NjYzMjI@._V1_FMjpg_UX1000_.jpg"
+    alt="baywatch" width="180px" height="250px"/>
+    <img src="https://occ-0-300-299.1.nflxso.net/dnm/api/v6/XsrytRUxks8BtTRf9HNlZkW2tvY/AAAABaHp9wr7cHWd8E22o3tr0OYCBL_-ddq3MxCNAoqe5xRfGOzkucjit8vm70wqo-eMj1ZtuzP2ujFWdrJkS9iCO9iipjVg9kAcbg.jpg"
+    alt="kabirsingh" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg"
+    alt="inception" width="180px" height="250px"/>
+    <img src="https://occ-0-1722-1723.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABUdKjCYmq4sZlTcXIkaF6TShemD0_3pzxL9Fz5TU8hsKaKo02dyAvAt1CyyoC0BrPFLfHLVNe4a_dDibcRZEJzhkUsph.jpg"
+    alt="omg" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZmMyODhhYTMtZWM1MS00YmU1LWE3NTktMTUxMjA4MWMyZGU0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+    alt="pacificrim" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOWM0YWMwMDQtMjE5NS00ZTIwLWE1NWEtODViMWZjMWI2OTU3XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg"
+    alt="adamproject" width="180px" height="250px"/>
+    <img src="https://assets.nflxext.com/us/boxshots/hd1080/70254350.jpg"
+    alt="chennai" width="180px" height="250px"/>
+    <img src="https://cdn.flixboss.com/70087087/posters/AAAABRG56J-80Z5emLSmYzxjC1Z55FYt8TRuRyTiDJWBIvtP_kqQI667-4IKaoDwsbDHEh4aYizsg0qEz6o79at1O3kw_A.jpg"
+    alt="taarezameenpar" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZjNkNzk0ZjEtM2M1ZC00MmMxLTlmOWEtNWRlZTc1ZTUyNzY4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg"
+    alt="enolaholmes" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOGM3MzQwYzItNDA1Ny00MzIyLTg5Y2QtYTAwMzNmMDU2ZDgxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_.jpg"
+    alt="skyscraper" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYjUyN2VlZGEtNGEyZC00YjViLTgwYmQtZDJiM2FlOTU3Mjg2XkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_.jpg"
+    alt="ambulance" width="180px" height="250px"/>
+    <img src="https://occ-0-4546-879.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABdYSXxAChdx1i9wDQ21F2wJhj0y15LosRdiUCJAJmQ8iAoABUq-pFBXaEP7mUYv-7DNgnuqmqgEsEb71-zltSDH-0VsrCNwyK9gj.jpg"
+    alt="dilwale" width="180px" height="250px"/>
+    <img src="https://occ-0-858-1722.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABcZWGwYkM8cPa2J9reCtoqr7rZMbd5aUfxKJ0fZaOOnMH8xMWznnY_MdVTHmFuymIj0AgEEpskjeb46aY09K717Vg9V7DH8SMMqU.jpg?r=ca0"
+    alt="omshantiom" width="180px" height="250px"/>
+  </div>
+  <h2 style="color: white;">TV Shows</h2>
+  <div class="tvshows">
+    <img src="https://m.media-amazon.com/images/M/MV5BMTQ2ZWFlNmEtNWYyYy00Yjk1LWIxMTEtMWVkM2NlMTEzOGI2XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg"
+    alt="ginny" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZjYzZDgzMmYtYjY5Zi00YTk1LThhMDYtNjFlNzM4MTZhYzgyXkEyXkFqcGdeQXVyMTE5NDQ1MzQ3._V1_.jpg"
+    alt="peaky" width="180px" height="250px"/>
+    <img src="https://thedigitalpopcorn.files.wordpress.com/2023/01/extraordinary-attorney-woo-frequently-asked-questions.jpg"
+    alt="extraordinary" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMjhmMjlhZTYtZjczZi00NmI5LTlhNzUtOWRkZTA3ZDJkNzMxXkEyXkFqcGdeQXVyMTUyNjIwMDEw._V1_.jpg"
+    alt="kohrra" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMmZlYTQ3NjQtZmIxNC00MzA4LTg1NDgtMmEzODk0MzA4NjQxXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg"
+    alt="vikings" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYmNlYzYwYzEtNDkzZS00NTM0LWI0ZTYtYjdmMjVlYTZmMDk4XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+    alt="sexeducation" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNDJjMzc4NGYtZmFmNS00YWY3LThjMzQtYzJlNGFkZGRiOWI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+    alt="lucifer" width="180px" height="250px"/>
+    <img src="https://flxt.tmsimg.com/assets/p17608361_b_v9_ae.jpg"
+    alt="pyhomshoulder" width="180px" height="250px"/>
+    <img src="https://1.bp.blogspot.com/-d-sQ4AKG4ts/Xy-pxIBaimI/AAAAAAAASeM/xOhDJ_H0okEpbOdUosleJN04XwB6ZDakACLcBGAsYHQ/s0/its%2Bok%2Bnot%2Bto%2Bbe%2Bok%2B2.jpg"
+    alt="itsoknottobeok" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYzkxMzI1MWMtYjdlOS00ZmNkLWE2MTgtZmY4NGQ1NDdmMzRlXkEyXkFqcGdeQXVyMTA3MTI2ODc5._V1_FMjpg_UX1000_.jpg"
+    alt="class" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOWM0YWMwMDQtMjE5NS00ZTIwLWE1NWEtODViMWZjMWI2OTU3XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg"
+    alt="adamproject" width="180px" height="250px"/>
+    <img src="https://occ-0-1723-1722.1.nflxso.net/dnm/api/v6/XsrytRUxks8BtTRf9HNlZkW2tvY/AAAABUsuJAhrY_O2wzX0YUuwOaWLp1Ee7D6O4oWe1spXrVKWGNywIhz6I9g5mitrlu1dh7Jw0dVzsZG3agmi_F1T4mMOxjYAhmhB4g.jpg"
+    alt="naruto" width="180px" height="250px"/>
+    <img src="https://occ-0-179-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABaerupjNEZ3YuRhPnfpVhIFJiJoGnAx3RWoKrGjNQL2EIJ5BP8WWsvuOWKPSBnCfva0u-JcszpIN8nVHq-elZpcF7GjOaBOnv6zP.jpg"
+    alt="descendants" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UX1000_.jpg"
+    alt="breakingbad" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZWI4NjY1MmQtN2QwNS00YTQwLWJlNDItMjZjMjE1ODk3MzI4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+    alt="littlethings" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_.jpg"
+    alt="dark" width="180px" height="250px"/>
+    <img src="https://assets.nflxext.com/us/boxshots/hd1080/70143860.jpg"
+    alt="vampire dairies" width="180px" height="250px"/>
+    <img src="https://www.pinkvilla.com/images/2022-09/all_of_us_are_dead_imp_poster_main.jpg"
+    alt="allofusdead" width="180px" height="250px"/>
+  </div>
+  <h2 style="color: white;">Top Searches</h2>
+  <div class="top">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/11/Narcos_season_3.png"
+    alt="narcos" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNWYyMzg3N2EtNTQ5MC00MWZlLWI3YWEtMmU2ZWNhZWZiNGIzXkEyXkFqcGdeQXVyMTI1NDAzMzM0._V1_FMjpg_UX1000_.jpg"
+    alt="haseena" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMzkwMTI0MGUtYzQzZi00ZTEwLWJkMmQtNDhmY2RjNDcxYzViXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg"
+    alt="gossipgirl" width="180px" height="250px"/>
+    <img src="https://occ-0-2587-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABVpXNlqtAAsdG7dcPglKdZN_Shw0hGZDa6BH1ya3VsRns0neKe4iLxL8AuhRS8KjZApTfDWH16xn2R-WXBSmeTOLy5n4VvWoAmg0.jpg"
+    alt="aedilhaimushkil" width="180px" height="250px"/>
+    <img src="https://occ-0-116-853.1.nflxso.net/dnm/api/v6/oQyw8Fv9eE41UPapt7zHvdUdzrE/AAAABa2o1WEghcR7TzaDQEHWju66l5FwcciFOsfJ8F3-UsJ_oYN5lyv1ToG6UcV3krZ-s26oEOuJDVTWNU8D8c8fVkFmUM8yJx5Aj53mODLjttsY67jCafS8UBeXqMJ7s9FsuksRvQ.jpg"
+    alt="20thcentury" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BZmVhNDY4ODEtMGY2My00MDZjLThjMmItYTE0OGYyMjJjZTkwXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg"
+    alt="houseofsecrets" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BOTUzMTMzNTgtNmI5NS00ZTI1LTgzMjYtZTFkZWZkYTE0MWMyXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg"
+    alt="mismatched" width="180px" height="250px"/>
+    <img src="https://occ-0-1386-299.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABd_PaKeqQpD1-qhcHo2RqC-7zE9QV1dfbjxw2SHVjFCzsIhjDJJtb6Ci7Fl1DtV-IOqbKj0rIItRMPMYrlhgByTts_5okLH7DqYd5ywI94au1okDxd6OFfThB5b_IaCoTM8ONgkcBbWz8B9oe2gzfP8Y4dPJkRP7W4tUW09kiIp00UZVeo0vqrjy4Nuo3OXClR7IsrPzxqhF6zrys2F3UYqWCP7Y5Gw8WlPquhAaW2SxtY92sBJsgDPZfWiNeCVtO2pwpiMrrAMbbmd7ovrmA-cRqjG-Ae8SigWdoH9gPyICfKw9l5ZPOioqhtEOy2AY_2lgwEFMLFqC2JdOv-Zov3MXJrsaafNDWrGtrqJQ_tCAH2JpNr9z3pF2C-R5-h1yBhKlQSDibMeTrBg5U6OwBuIbyo3Ty3gyeEtJthyNer9fwreq_sw-iRJok2uxtetmXIiNx-POUQ.jpg"
+    alt="seeyouinmy" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMDEwOWVlY2EtMWI0ZC00OWVmLWJmZGItYTk3YjYzN2Y0YmFkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
+    alt="thewitcher" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMTMwMDM4N2EtOTJiYy00OTQ0LThlZDYtYWUwOWFlY2IxZGVjXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
+    alt="jujutsu" width="180px" height="250px"/>
+    <img src="https://occ-0-38-420.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVYpeSJqJdaWfDG_sbOP0nfLwPMgn7pLwIzlrEBA7DrMjN7ZXoSEvrBAXWmUpxUvFD5tHeWdd31jXpOEsz3iXhVJheqYx2Ojcy0_.jpg?r=632"
+    alt="spiderman" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYzAwOWFmYTMtNmMyNC00NTBlLWFlMzMtNzFkYjFmYjU4YWFmXkEyXkFqcGdeQXVyNjc3ODA5NjA@._V1_FMjpg_UX1000_.jpg"
+    alt="scream" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNjQ0Mzk0OTE5MF5BMl5BanBnXkFtZTgwNDkyOTI0NTM@._V1_.jpg"
+    alt="kissingbooth" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMDdhYzNkOWQtYWNlNi00NDdjLWJlZDMtMjJjZDYyNjAxM2U1XkEyXkFqcGdeQXVyMTQyMTMwOTk0._V1_.jpg"
+    alt="365days" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+    alt="strangerthings" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BYmU5N2YzYjQtM2Q4Yi00NWY4LWI5NDQtMzE4OTlhY2Q5NmJlXkEyXkFqcGdeQXVyMTMxNjUyMDkx._V1_FMjpg_UX1000_.jpg"
+    alt="elite" width="180px" height="250px"/>
+    <img src="https://occ-0-299-300.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABQNsJG2bWWC2sKVkVbhRoduS0gP5wmnuMMrMxHmq0K4WEhlufZY7Em8SfLKCcLsFC__ZYgG_uDRab4c26xizLvK7o0TslvKsZVme87VDe45kGierYj3NxuXSdPKx7A.jpg"
+    alt="alive" width="180px" height="250px"/>
+    <img src="https://m.media-amazon.com/images/M/MV5BNjk5ZTk5NTAtYTQ4MS00NWI2LTg2NzQtZTBhYmEzOWU3MDQ0XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg"
+    alt="birdbox" width="180px" height="250px"/>
+  </div>
+</body>
+</html>
